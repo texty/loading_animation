@@ -1,0 +1,36 @@
+/* Loading styles */
+.project {  
+  display: none; /* we hide main container wrapping the project to display animation */
+}
+
+.word {
+  font-family: Open Sans, sans-serif;
+  font-weight: bold;
+  color: #ccc;
+  font-size: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  margin-left: 40%;
+  margin-top: 15%;
+  position: absolute;
+}
+
+.word span {
+  display: inline-block;
+  transition: transform 100ms;
+}
+
+.word .done {
+  color: #3A3F4A;
+}
+
+.overlay {
+  background-size: 1000px 2px;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -100000;
+}
