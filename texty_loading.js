@@ -1,4 +1,5 @@
 //ProgressBar
+before = (new Date()).getTime();
 function Ticker( elem ) {
 	elem.lettering();
 	this.done = false;
@@ -68,9 +69,9 @@ Ticker.prototype.loop = function() {
 	}
 };
 
-$words = $( '.word' );
+$loaderWords = $( '.loader' );
 
-$words.each( function() {
+$loaderWords.each( function() {
 	var $this = $( this ),
 		ticker = new Ticker( $this ).reset();
 	$this.data( 'ticker', ticker  );
@@ -81,8 +82,9 @@ window.onload = function onLoad() {
  var after = (new Date()).getTime();
  var sec = (after-before); // getting the loading time 
  setTimeout(function(){
-    $(".word, .overlay").remove();
+    $(".loader, .overlay").remove();
     $('.project').fadeIn(1000);
-  }, sec + 3000); // plus extra 3 sec just in case
+    console.log(sec);
+  }, sec + 5000); // plus extra 5 sec just in case
 };
 
